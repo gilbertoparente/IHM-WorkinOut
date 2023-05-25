@@ -1,0 +1,24 @@
+<ion-content [fullscreen]="true" class="content">
+  <div class="background-image">
+    <div class="workout">
+      <label>Work</label>
+      <label class="in">In</label>
+      <label>Out</label>
+    </div>
+  </div>
+  <div>
+    <div>
+      <label>Nome de utilizador</label>
+      <div style="align-items: center;">
+        <input class='username' type='text' placeholder=''  />
+      </div>
+    </div>
+    <div>
+      <label>Password</label>
+    </div>
+    <input class='password' type='password' placeholder=''  />
+    <ion-button (click)="toHome()" expand="block">Entrar</ion-button>
+    <ion-button (click)="toRegister()" expand="block">Registar</ion-button>
+  </div>
+</ion-content>
+

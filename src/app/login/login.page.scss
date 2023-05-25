@@ -1,0 +1,51 @@
+.username {
+    background-color: rgb(61, 61, 61);
+    border-radius: 20px;
+    height: 40px;
+    width: 300px;
+    display: block;
+    margin: 0 auto; /* Center the element horizontally */
+    text-align: left; /* Align the text to the left */
+    padding-left: 10px; /* Add some left padding to the text */
+  }
+  
+  .password {
+    background-color: rgb(61, 61, 61);
+    border-radius: 20px;
+    height: 40px;
+    width: 300px;
+    display: block;
+    margin: 0 auto; /* Center the element horizontally */
+    text-align: left; /* Align the text to the left */
+    padding-left: 10px; /* Add some left padding to the text */
+  }
+  
+  .workout {
+    font-family: Franklin Gothic Medium;
+    left: 20px;
+    
+  }
+  
+  .in {
+    font-family: Franklin Gothic Medium;
+    color: #FF9900;
+  }
+  
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .background-image {
+    background-image: url('/assets/login.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 400px;
+  }
+  
+  
+  
+  

@@ -1,0 +1,169 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>    
+    <ion-title>Criar Conta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true"  class="texto-claro" >
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large" color="success">Registo</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  
+  <ion-list>
+    <ion-list>
+      <ion-item class="ion-color-white">
+        <ion-input label="Nome" placeholder="Inserir o nome"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-input label="Email" placeholder="Inserir o email"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-input label="Palavra-passe" type="password" value=""></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-input label="Confirmar Palavra-passe" type="password" value=""></ion-input>
+      </ion-item>
+  
+     </ion-list>
+  </ion-list>
+  <div class="ion-padding">
+        <ion-list>          
+          <ion-item>
+            <ion-select aria-label="Fruit" interface="popover" placeholder="Selecionar idade">
+              <ion-select-option value="apples">18</ion-select-option>
+              <ion-select-option value="oranges">19</ion-select-option>
+              <ion-select-option value="bananas">20</ion-select-option>
+              <ion-select-option value="apples">21</ion-select-option>
+              <ion-select-option value="oranges">22</ion-select-option>
+              <ion-select-option value="bananas">23</ion-select-option>
+              <ion-select-option value="apples">24</ion-select-option>
+              <ion-select-option value="oranges">25</ion-select-option>
+              <ion-select-option value="bananas">26</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+     
+        <ion-list>
+          <ion-item>
+            <ion-select aria-label="Fruit" interface="popover" placeholder="Selecionar peso">
+              <ion-select-option value="apples">60</ion-select-option>
+              <ion-select-option value="oranges">65</ion-select-option>
+              <ion-select-option value="bananas">70</ion-select-option>
+              <ion-select-option value="apples">75</ion-select-option>
+              <ion-select-option value="oranges">80</ion-select-option>
+              <ion-select-option value="bananas">85</ion-select-option>
+              <ion-select-option value="apples">90</ion-select-option>
+              <ion-select-option value="oranges">95</ion-select-option>
+              <ion-select-option value="bananas">100</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+
+        <ion-list>
+          <ion-item>
+            <ion-select aria-label="Fruit" interface="popover" placeholder="Selecionar altura">
+              <ion-select-option value="apples">120</ion-select-option>
+              <ion-select-option value="oranges">125</ion-select-option>
+              <ion-select-option value="bananas">130</ion-select-option>
+              <ion-select-option value="apples">135</ion-select-option>
+              <ion-select-option value="oranges">140</ion-select-option>
+              <ion-select-option value="bananas">150</ion-select-option>
+              <ion-select-option value="apples">155</ion-select-option>
+              <ion-select-option value="oranges">160</ion-select-option>
+              <ion-select-option value="bananas">165</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+
+
+
+
+    
+  </div>
+  <div class="ion-padding" class="centrar-div">
+    <ion-text color="primary">Condição Física</ion-text>
+  </div> 
+
+  <div class="ion-padding">
+    <ion-range
+    aria-label="Custom range"
+    [min]="0"
+    [max]="10"
+    [value]="5"
+    [pin]="true"
+    [ticks]="true"
+    [snaps]="true"
+  ></ion-range>
+  </div>
+
+  <div class="ion-padding" class="centrar-div">
+    <ion-text color="primary">Duração do treino</ion-text>
+  </div>
+  <div class="ion-padding">
+    <ion-range
+    aria-label="Custom range"
+    [min]="15"
+    [max]="60"
+    [value]="5"
+    [pin]="true"
+    [ticks]="true"
+    [snaps]="true"
+  ></ion-range>
+  </div>
+
+  <div class="ion-padding">
+    <ion-list  class="centrar-div">
+      <ion-item>
+        <ion-select aria-label="Fruit" placeholder="Dias de treino" [multiple]="true">
+          <ion-select-option value="apples">Segunda</ion-select-option>
+          <ion-select-option value="oranges">Terça</ion-select-option>
+          <ion-select-option value="bananas">Quarta</ion-select-option>
+          <ion-select-option value="apples">Quinta</ion-select-option>
+          <ion-select-option value="oranges">Sexta</ion-select-option>
+          <ion-select-option value="bananas">Sábado</ion-select-option>
+          <ion-select-option value="bananas">Domingo</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <div class="ion-padding"></div>
+  <div class="ion-padding"></div>
+
+  <div class="ion-padding" class="centrar-div" >
+    <ion-list >
+      <ion-item>
+        <ion-select aria-label="Fruit" placeholder="Foco do Treino" [multiple]="true">
+          <ion-select-option value="apples">Cardio</ion-select-option>
+          <ion-select-option value="oranges">Musculação</ion-select-option>
+          <ion-select-option value="bananas">Ioga</ion-select-option>
+          <ion-select-option value="apples">Alongamentos</ion-select-option>
+          <ion-select-option value="oranges">Resistencia</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <div class="ion-padding"></div>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="submeter()" shape="round">Submeter</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="cancelar()" shape="round">Cancelar</ion-button>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+  
+
+
+</ion-content>
