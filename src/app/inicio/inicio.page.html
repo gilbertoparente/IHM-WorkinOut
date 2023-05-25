@@ -1,13 +1,25 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>inicio</ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" >
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">inicio</ion-title>
+      <ion-title size="large" >Tab 1</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <main class="flex flex-col gap-5  p-7 bg-zinc-900 h-screen text-white ">
+    <h1 class="text-3xl">Olá <span class="text-orange-400">António</span></h1>
+    <section>
+      <a href="www.youtube.com">
+        <img src="../../assets/home_page.png" alt="" srcset="">
+      </a>
+    </section>
+    <section class="grid grid-cols-3 gap-3">
+      <button class="bg-buttons p-2 col-span-2 text-xl">Meus treinos</button>
+      <button class="bg-buttons p-2">
+        <img src="../../assets/seta.svg" alt="" srcset="">
+      </button>
+    </section>
+    <h1 class="text-3xl">Feed</h1>
+  </main>
 </ion-content>
+
