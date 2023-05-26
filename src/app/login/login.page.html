@@ -1,24 +1,37 @@
+<head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap');
+    /* Place other stylesheets or inline styles here */
+  </style>
+</head>
+
+
 <ion-content [fullscreen]="true" class="content">
-  <div class="background-image">
-    <div class="workout">
-      <label>Work</label>
-      <label class="in">In</label>
-      <label>Out</label>
-    </div>
-  </div>
   <div>
-    <div>
-      <label>Nome de utilizador</label>
-      <div style="align-items: center;">
-        <input class='username' type='text' placeholder=''  />
+    <div class="background-image">
+      <div class="workout">
+        <label>Work</label>
+        <label class="in">In</label>
+        <label>Out</label>
       </div>
     </div>
-    <div>
-      <label>Password</label>
+    <div class="background">
+      <div>
+        <label class="labels">Nome de utilizador</label>
+        <div style="align-items: center;">
+          <input class='username' type='text' placeholder=''  />
+        </div>
+      </div>
+      <div>
+        <label class="labels">Password</label>
+      </div>
+      <input class='password' type='password' placeholder=''  />
+      <div class="buttons">
+        <ion-button (click)="toHome()" expand="block">Entrar</ion-button>
+        <ion-button (click)="toRegister()" expand="block">Registar</ion-button>
+      </div>
     </div>
-    <input class='password' type='password' placeholder=''  />
-    <ion-button (click)="toHome()" expand="block">Entrar</ion-button>
-    <ion-button (click)="toRegister()" expand="block">Registar</ion-button>
   </div>
+  
 </ion-content>
 
