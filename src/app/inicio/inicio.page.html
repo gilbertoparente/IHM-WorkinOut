@@ -1,23 +1,60 @@
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large"></ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-header>
+  <ion-toolbar>
+    <ion-title size="large"></ion-title>
+  </ion-toolbar>
+</ion-header>
 
-  <main id="container" class="container">
-    <h1 class="text-3xl">Olá <span class="text-orange-400">António</span></h1>
+
+<ion-content [fullscreen]="true" scrollY="true">
+  <link rel="stylesheet" type="text/css" href="inicio.page.scss">
+  <div id="container" class="container">
+    <h1 class="text-3xl"><span class="text-gray">Olá</span> <span class="text-orange-400">António</span></h1>
     <section>
       <a href="www.youtube.com">
         <img src="../../assets/home_page.png" alt="" srcset="">
       </a>
     </section>
+
     <section class="grid grid-cols-3 gap-3">
-      <button class="bg-buttons p-2 col-span-2 text-xl">Meus treinos</button>
-      <button class="bg-buttons p-2">
+      <button class="bg-buttons p-1 col-span-2 text-lg">Meus treinos</button>
+      <button class="bg-buttons p-1">
         <img src="../../assets/seta.svg" alt="" srcset="">
       </button>
     </section>
-    <h1 class="text-3xl">Feed</h1>
-  </main>
+    <h1 class="text-3xl feed-heading">Feed</h1>
+  </div>
+
+
+  <ion-tabs class=""tabs">
+    
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="inicio">
+      <ion-icon aria-hidden="true" name="square"></ion-icon>
+      <ion-label>Inicio</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="feed">
+      <ion-icon aria-hidden="true" name="square"></ion-icon>
+      <ion-label>Feed</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="perfil">
+      <ion-icon aria-hidden="true" name="square"></ion-icon>
+      <ion-label>Perfil</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="treinar">
+      <ion-icon aria-hidden="true" name="square"></ion-icon>
+      <ion-label>Treinar</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="planos">
+      <ion-icon aria-hidden="true" name="square"></ion-icon>
+      <ion-label>Planos</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+
+</ion-tabs>
+
+ 
 </ion-content>
