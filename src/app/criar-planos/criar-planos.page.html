@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>criarPlanos</ion-title>
+    <ion-title>Criação de Planos</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -10,4 +10,83 @@
       <ion-title size="large">criarPlanos</ion-title>
     </ion-toolbar>
   </ion-header>
+
+
+  <br />
+  <br />
+
+  <div class="ion-padding" class="centrar-div">
+    <ion-text color="primary">Criar o meu plano</ion-text>
+  </div> 
+  <br />
+  <br />
+
+  <ion-select label="Categoria" label-placement="floating" fill="outline">
+    <ion-select-option value="apple">Treino de cárdio 1</ion-select-option>
+    <ion-select-option value="banana">Treino de cárdio 2</ion-select-option>
+    <ion-select-option value="orange">Treino de cárdio 3</ion-select-option>
+  </ion-select>
+
+  <br />
+
+  <ion-select label="Sub-Categoria" label-placement="floating" fill="outline">
+    <ion-select-option value="apple">Treino de resistencia 1</ion-select-option>
+    <ion-select-option value="banana">Treino de resistencia 2</ion-select-option>
+    <ion-select-option value="orange">Treino de resistencia 3</ion-select-option>
+  </ion-select>
+
+  <br />
+  <br />
+
+  <div class="ion-padding" class="centrar-div">
+    <ion-text color="primary">Tempo exercício</ion-text>
+  </div> 
+ 
+
+  <div class="ion-padding">
+    <ion-range
+    aria-label="Custom range"
+    [min]="15"
+    [max]="60"
+    [value]="5"
+    [pin]="true"
+    [ticks]="true"
+    [snaps]="true"
+  ></ion-range>
+  </div>
+
+
+  <br />
+
+  <div class="ion-padding" class="centrar-div">
+    <ion-text color="primary">Exercícios disponíveis</ion-text>
+  </div> 
+  <br />
+
+  <ion-list class="ion-padding" >
+    <ion-item>
+    <ion-checkbox justify="space-between">Jumping Jacks</ion-checkbox>
+  </ion-item>
+  <ion-item>
+    <ion-checkbox justify="space-between">Cadeira</ion-checkbox>
+  </ion-item>
+  <ion-item>
+    <ion-checkbox justify="space-between">Flexão</ion-checkbox>
+  </ion-item>
+  <ion-item>
+    <ion-checkbox justify="space-between">Abdominais</ion-checkbox>
+  </ion-item>
+</ion-list>
+
+<br />
+<ion-grid>
+  <ion-row>
+    <ion-col></ion-col>
+    <ion-col>
+      <ion-button  (click)="resumoPlanos()" [disabled]="false">Avançar</ion-button>
+    </ion-col>
+    <ion-col></ion-col>
+  </ion-row>
+</ion-grid>
+
 </ion-content>

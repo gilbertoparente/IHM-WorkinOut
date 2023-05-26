@@ -18,7 +18,8 @@ const routes: Routes = [
     path: '',
     redirectTo: 'login',
     pathMatch: 'full'
-  },  {
+  },
+  {
     path: 'criar-planos',
     loadChildren: () => import('./criar-planos/criar-planos.module').then( m => m.CriarPlanosPageModule)
   },

@@ -32,6 +32,14 @@ const routes: Routes = [
             loadChildren: () => import('../login/login.module').then(m => m.LoginPageModule)
       },
       {
+        path: 'criar-planos',
+            loadChildren: () => import('../criar-planos/criar-planos.module').then(m => m.CriarPlanosPageModule)
+      },
+      {
+        path: 'planos-resumo',
+            loadChildren: () => import('../planos-resumo/planos-resumo.module').then(m => m.PlanosResumoPageModule)
+      },
+      {
         path: '',
         redirectTo: '/tabs/inicio',
         pathMatch: 'full'
