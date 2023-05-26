@@ -1,5 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { InicioPage } from './inicio.page';
+import './styles.css';
+
 
 describe('InicioPage', () => {
   let component: InicioPage;
