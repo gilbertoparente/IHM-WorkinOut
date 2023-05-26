@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>planos</ion-title>
+    <ion-title>Planos de Treino</ion-title>    
   </ion-toolbar>
 </ion-header>
 
@@ -10,4 +10,69 @@
       <ion-title size="large">planos</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col><h2>Os meus Planos</h2></ion-col>
+      <ion-col size="auto">
+        <div style="width: 50px">
+          <ion-button class="ion-padding-end">
+            <ion-icon slot="icon-only" name="add"></ion-icon>
+          </ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <br />
+
+    <ion-select label="Alongamentos" label-placement="floating" fill="outline">
+      <ion-select-option value="apple">Treino de alongamentos 1</ion-select-option>
+      <ion-select-option value="banana">Treino de alongamentos 2</ion-select-option>
+      <ion-select-option value="orange">Treino de alongamentos 3</ion-select-option>
+    </ion-select>
+
+  <br />
+
+  <ion-select label="Ioga" label-placement="floating" fill="outline">
+    <ion-select-option value="apple">Treino de ioga 1</ion-select-option>
+    <ion-select-option value="banana">Treino de ioga 2</ion-select-option>
+    <ion-select-option value="orange">Treino de ioga 3</ion-select-option>
+  </ion-select>
+
+  <br />
+
+  <ion-select label="Musculação" label-placement="floating" fill="outline">
+    <ion-select-option value="apple">Treino de musculação 1</ion-select-option>
+    <ion-select-option value="banana">Treino de musculação 2</ion-select-option>
+    <ion-select-option value="orange">Treino de musculação 3</ion-select-option>
+  </ion-select>
+
+  <br />
+
+  <ion-select label="Cárdio" label-placement="floating" fill="outline">
+    <ion-select-option value="apple">Treino de cárdio 1</ion-select-option>
+    <ion-select-option value="banana">Treino de cárdio 2</ion-select-option>
+    <ion-select-option value="orange">Treino de cárdio 3</ion-select-option>
+  </ion-select>
+
+  <br />
+
+  <ion-select label="Resistência" label-placement="floating" fill="outline">
+    <ion-select-option value="apple">Treino de resistencia 1</ion-select-option>
+    <ion-select-option value="banana">Treino de resistencia 2</ion-select-option>
+    <ion-select-option value="orange">Treino de resistencia 3</ion-select-option>
+  </ion-select>
+
+  <br />
+  <ion-grid>
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col>
+        <ion-button [disabled]="true">Iniciar treino</ion-button>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>
