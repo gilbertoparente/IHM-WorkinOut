@@ -10,4 +10,27 @@
       <ion-title size="large">planos</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <ion-list>
+    <ion-item>
+    <ion-label>Users: </ion-label>
+    <ion-badge>{{users.length}}</ion-badge>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item *ngFor="let user of users">
+    <ion-label>
+      {{ user.nome }}
+      {{ user.email }}
+      {{ user.password }}
+      {{ user.diasTreino }}
+      {{ user.condFisica }}
+      {{ user.foco }}
+      
+
+    </ion-label>
+    </ion-item>
+  </ion-list>
+
 </ion-content>

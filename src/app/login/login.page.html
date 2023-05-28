@@ -17,15 +17,15 @@
     </div>
     <div class="background">
       <div>
-        <label class="labels">Nome de utilizador</label>
+        <label class="labels">Email</label>
         <div style="align-items: center;">
-          <input class='username' type='text' placeholder=''  />
+          <input class='username' type='text' [(ngModel)]="email" placeholder='' />
         </div>
       </div>
       <div>
         <label class="labels">Password</label>
       </div>
-      <input class='password' type='password' placeholder=''  />
+        <input class='password' type='password' [(ngModel)]="password" placeholder='' />
       <div class="buttons">
         <ion-button (click)="toHome()" expand="block">Entrar</ion-button>
         <ion-button (click)="toRegister()" expand="block">Registar</ion-button>
