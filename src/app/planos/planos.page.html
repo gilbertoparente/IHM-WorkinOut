@@ -26,6 +26,23 @@
     </ion-row>
   </ion-grid>
 
+
+<ion-grid>
+  <ion-row *ngFor="let plano of planos | keyvalue" class="ion-margin">
+    <ion-col size="8"><ion-text color="primary">{{ plano.value.title }}</ion-text></ion-col>
+    <ion-col size="10"><ion-text color="medium" class="ion-float-right"><small>{{ plano.value.Categoria }}</small></ion-text></ion-col>
+    <ion-col size="8">{{ plano.value.tempo }}</ion-col>
+  </ion-row>
+</ion-grid>
+
+
+  <ion-select label="Alongamentos" label-placement="floating" fill="outline">
+    <ion-select-option value="apple">Treino de alongamentos 1</ion-select-option>
+    <ion-select-option value="banana">Treino de alongamentos 2</ion-select-option>
+    <ion-select-option value="orange">Treino de alongamentos 3</ion-select-option>
+  </ion-select>
+
+
   <ion-select label="Meus planos" label-placement="floating" fill="outline">
     <ion-select-option value="1">Treino de alongamentos 1</ion-select-option>
     <ion-select-option value="2">Treino de alongamentos 2</ion-select-option>
