@@ -1,4 +1,26 @@
 ion-content {
-    --background: #383838;
-    background-color: #383838;
-  }
+  --background: #383838;
+}
+
+ion-select {
+  background-color: #585858;
+  border-radius: 50px;
+}
+
+ion-fab-button {
+  --background: #ea7203;
+  --color-selected: red;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 2px #ea73039f;
+
+}
+
+ion-button {
+  --background: #ea7203;
+  --color-selected: red;
+  --border-radius: 50px;
+}
+
+.options {
+  top: 100px;
+}

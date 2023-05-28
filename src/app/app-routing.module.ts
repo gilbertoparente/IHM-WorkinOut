@@ -15,6 +15,14 @@ export const routes: Routes = [
     loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
   },
   {
+    path: 'criar-planos',
+    loadChildren: () => import('./criar-planos/criar-planos.module').then( m => m.CriarPlanosPageModule)
+  },
+  {
+    path: 'planos-resumo',
+    loadChildren: () => import('./planos-resumo/planos-resumo.module').then(m => m.PlanosResumoPageModule)
+  },
+  {
     path: '',
     redirectTo: 'login',
     pathMatch: 'full'
