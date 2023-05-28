@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [
+export const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
@@ -18,16 +18,7 @@ const routes: Routes = [
     path: '',
     redirectTo: 'login',
     pathMatch: 'full'
-  },
-  {
-    path: 'criar-planos',
-    loadChildren: () => import('./criar-planos/criar-planos.module').then( m => m.CriarPlanosPageModule)
-  },
-  {
-    path: 'planos-resumo',
-    loadChildren: () => import('./planos-resumo/planos-resumo.module').then( m => m.PlanosResumoPageModule)
   }
-
   
 ];
 @NgModule({
