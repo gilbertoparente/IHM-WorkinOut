@@ -15,76 +15,94 @@
   <ion-list>
     <ion-list>
       <ion-item class="ion-color-white">
-        <ion-input label="Nome" placeholder="Inserir o nome"></ion-input>
+        <ion-input
+          type="text"
+          [(ngModel)]="user.nome"
+          name="nome"
+          required
+          placeholder="Nome"
+        ></ion-input>
       </ion-item>
   
       <ion-item>
-        <ion-input label="Email" placeholder="Inserir o email"></ion-input>
+        <ion-input
+          type="email"
+          [(ngModel)]="user.email"
+          name="email"
+          required
+          placeholder="Email"
+        ></ion-input>
       </ion-item>
   
       <ion-item>
-        <ion-input label="Palavra-passe" type="password" value=""></ion-input>
+        <ion-input
+        type="password"
+        [(ngModel)]="user.password"
+        name="password"
+        required
+        placeholder="Palavra-passe"
+        ></ion-input>
       </ion-item>
   
       <ion-item>
-        <ion-input label="Confirmar Palavra-passe" type="password" value=""></ion-input>
+        <ion-input
+        type="password" 
+        name="confirmPassword" 
+        required
+        placeholder="Confirmação palavra-passe"
+        ></ion-input>
       </ion-item>
   
      </ion-list>
   </ion-list>
   <div class="ion-padding">
-        <ion-list>          
-          <ion-item>
-            <ion-select aria-label="Fruit" interface="popover" placeholder="Selecionar idade">
-              <ion-select-option value="apples">18</ion-select-option>
-              <ion-select-option value="oranges">19</ion-select-option>
-              <ion-select-option value="bananas">20</ion-select-option>
-              <ion-select-option value="apples">21</ion-select-option>
-              <ion-select-option value="oranges">22</ion-select-option>
-              <ion-select-option value="bananas">23</ion-select-option>
-              <ion-select-option value="apples">24</ion-select-option>
-              <ion-select-option value="oranges">25</ion-select-option>
-              <ion-select-option value="bananas">26</ion-select-option>
-            </ion-select>
-          </ion-item>
-        </ion-list>
-     
-        <ion-list>
-          <ion-item>
-            <ion-select aria-label="Fruit" interface="popover" placeholder="Selecionar peso">
-              <ion-select-option value="apples">60</ion-select-option>
-              <ion-select-option value="oranges">65</ion-select-option>
-              <ion-select-option value="bananas">70</ion-select-option>
-              <ion-select-option value="apples">75</ion-select-option>
-              <ion-select-option value="oranges">80</ion-select-option>
-              <ion-select-option value="bananas">85</ion-select-option>
-              <ion-select-option value="apples">90</ion-select-option>
-              <ion-select-option value="oranges">95</ion-select-option>
-              <ion-select-option value="bananas">100</ion-select-option>
-            </ion-select>
-          </ion-item>
-        </ion-list>
+    <ion-list>          
+      <ion-item>
+        <ion-select aria-label="idade" interface="popover" placeholder="Selecionar idade" [(ngModel)]="user.idade">
+          <ion-select-option value="18">18</ion-select-option>
+          <ion-select-option value="19">19</ion-select-option>
+          <ion-select-option value="20">20</ion-select-option>
+          <ion-select-option value="21">21</ion-select-option>
+          <ion-select-option value="22">22</ion-select-option>
+          <ion-select-option value="23">23</ion-select-option>
+          <ion-select-option value="24">24</ion-select-option>
+          <ion-select-option value="25">25</ion-select-option>
+          <ion-select-option value="26">26</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
 
-        <ion-list>
-          <ion-item>
-            <ion-select aria-label="Fruit" interface="popover" placeholder="Selecionar altura">
-              <ion-select-option value="apples">120</ion-select-option>
-              <ion-select-option value="oranges">125</ion-select-option>
-              <ion-select-option value="bananas">130</ion-select-option>
-              <ion-select-option value="apples">135</ion-select-option>
-              <ion-select-option value="oranges">140</ion-select-option>
-              <ion-select-option value="bananas">150</ion-select-option>
-              <ion-select-option value="apples">155</ion-select-option>
-              <ion-select-option value="oranges">160</ion-select-option>
-              <ion-select-option value="bananas">165</ion-select-option>
-            </ion-select>
-          </ion-item>
-        </ion-list>
+    <ion-list>
+      <ion-item>
+        <ion-select aria-label="peso" interface="popover" placeholder="Selecionar peso (kg)" [(ngModel)]="user.peso">
+          <ion-select-option value="60">60</ion-select-option>
+          <ion-select-option value="65">65</ion-select-option>
+          <ion-select-option value="70">70</ion-select-option>
+          <ion-select-option value="75">75</ion-select-option>
+          <ion-select-option value="80">80</ion-select-option>
+          <ion-select-option value="85">85</ion-select-option>
+          <ion-select-option value="90">90</ion-select-option>
+          <ion-select-option value="95">95</ion-select-option>
+          <ion-select-option value="100">100</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
 
-
-
-
-    
+    <ion-list>
+      <ion-item>
+        <ion-select aria-label="altura" interface="popover" placeholder="Selecionar altura (cm)" [(ngModel)]="user.altura">
+          <ion-select-option value="120">120</ion-select-option>
+          <ion-select-option value="125">125</ion-select-option>
+          <ion-select-option value="130">130</ion-select-option>
+          <ion-select-option value="135">135</ion-select-option>
+          <ion-select-option value="140">140</ion-select-option>
+          <ion-select-option value="145">145</ion-select-option>
+          <ion-select-option value="150">150</ion-select-option>
+          <ion-select-option value="155">155</ion-select-option>
+          <ion-select-option value="160">160</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
   </div>
   <div class="ion-padding" class="centrar-div">
     <ion-text color="primary">Condição Física</ion-text>
@@ -95,7 +113,7 @@
     aria-label="Custom range"
     [min]="0"
     [max]="10"
-    [value]="5"
+    [(ngModel)]="user.condFisica"
     [pin]="true"
     [ticks]="true"
     [snaps]="true"
@@ -110,24 +128,25 @@
     aria-label="Custom range"
     [min]="15"
     [max]="60"
-    [value]="5"
+    [step] = "5"
+    [(ngModel)]="user.duracaoPref"
     [pin]="true"
     [ticks]="true"
     [snaps]="true"
-  ></ion-range>
+    ></ion-range>
   </div>
 
   <div class="ion-padding">
     <ion-list  class="centrar-div">
       <ion-item>
-        <ion-select aria-label="Fruit" placeholder="Dias de treino" [multiple]="true">
-          <ion-select-option value="apples">Segunda</ion-select-option>
-          <ion-select-option value="oranges">Terça</ion-select-option>
-          <ion-select-option value="bananas">Quarta</ion-select-option>
-          <ion-select-option value="apples">Quinta</ion-select-option>
-          <ion-select-option value="oranges">Sexta</ion-select-option>
-          <ion-select-option value="bananas">Sábado</ion-select-option>
-          <ion-select-option value="bananas">Domingo</ion-select-option>
+        <ion-select aria-label="dia" placeholder="Dias de treino" [multiple]="true" [(ngModel)]="user.diasTreino">
+          <ion-select-option value="segunda">Segunda</ion-select-option>
+          <ion-select-option value="terca">Terça</ion-select-option>
+          <ion-select-option value="quarta">Quarta</ion-select-option>
+          <ion-select-option value="quinta">Quinta</ion-select-option>
+          <ion-select-option value="sexta">Sexta</ion-select-option>
+          <ion-select-option value="sabado">Sábado</ion-select-option>
+          <ion-select-option value="domingo">Domingo</ion-select-option>
         </ion-select>
       </ion-item>
     </ion-list>
@@ -139,12 +158,12 @@
   <div class="ion-padding" class="centrar-div" >
     <ion-list >
       <ion-item>
-        <ion-select aria-label="Fruit" placeholder="Foco do Treino" [multiple]="true">
-          <ion-select-option value="apples">Cardio</ion-select-option>
-          <ion-select-option value="oranges">Musculação</ion-select-option>
-          <ion-select-option value="bananas">Ioga</ion-select-option>
-          <ion-select-option value="apples">Alongamentos</ion-select-option>
-          <ion-select-option value="oranges">Resistencia</ion-select-option>
+        <ion-select aria-label="tipo" placeholder="Foco do Treino" [multiple]="true" [(ngModel)]="user.foco">
+          <ion-select-option value="cardio">Cardio</ion-select-option>
+          <ion-select-option value="musculacao">Musculação</ion-select-option>
+          <ion-select-option value="ioga">Ioga</ion-select-option>
+          <ion-select-option value="alongamentos">Alongamentos</ion-select-option>
+          <ion-select-option value="resistencia">Resistencia</ion-select-option>
         </ion-select>
       </ion-item>
     </ion-list>
