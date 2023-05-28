@@ -21,6 +21,7 @@ export interface User {
 
 export class AuthenticationService {
   private user: User[];
+  private currentUser!: User;
 
   constructor(private storage: Storage) {
     this.user = [];
@@ -29,7 +30,12 @@ export class AuthenticationService {
 
   login(email: string, password: string): boolean {
     const user = this.user.find(user => user.email === email && user.password === password);
-    return !!user; // Returns true if user exists, false otherwise
+    if (user) {
+      this.currentUser = user; // Set the current user
+      return true;
+    } else {
+      return false;
+    }
   }
 
   async init() {
@@ -47,7 +53,12 @@ export class AuthenticationService {
 
   async insertUser(user: User) {
     this.user.push(user);
+    this.currentUser = user;
     await this.storage.set('users', this.user);
+  }
+
+  getCurrentUser(): User {
+    return this.currentUser;
   }
 
 }

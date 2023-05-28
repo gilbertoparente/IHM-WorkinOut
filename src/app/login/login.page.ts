@@ -21,9 +21,14 @@ export class LoginPage implements OnInit {
   toHome() {
     const isLoggedIn = this.authService.login(this.email, this.password);
     if (isLoggedIn) {
+      const currentUser = this.authService.getCurrentUser();
+      if (currentUser) {
+        const userName = currentUser.nome;
+        console.log('Logged-in user name:', userName);
+      }
       this.router.navigateByUrl('/tabs');
     } else {
-      // Handle invalid login credentials
+      console.log('Authentication failed');
     }
   }
 
