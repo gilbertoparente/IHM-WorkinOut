@@ -2,29 +2,29 @@
     "Plano terino 1": {
         "id": "1",
         "title": "Alongamentos",
-        "Caegoria": "Alongamentos",
-        "tempo": "10 min"
+        "Categoria": "Alongamentos",
+        "tempo": "10"
         
     },
     "Plano terino 2": {
         "id": "2",
         "title": "Alongamentos",
-        "Caegoria": "Alongamentos",
-        "tempo": "15 min"
+        "Categoria": "Alongamentos",
+        "tempo": "15"
         
     },
     "Plano terino 3 ": {
         "id": "3",
         "title": "Alongamentos",
-        "Caegoria": "Alongamentos",
-        "tempo": "20 min"
+        "Categoria": "Alongamentos",
+        "tempo": "20"
         
     },
-    "Plano terino 3 ": {
+    "Plano terino 4 ": {
         "id": "4",
         "title": "Alongamentos",
-        "Caegoria": "Alongamentos",
-        "tempo": "25 min"
+        "Categoria": "Alongamentos",
+        "tempo": "25"
         
     }
 
