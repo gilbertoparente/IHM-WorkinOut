@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>planosResumo</ion-title>
+    <ion-title>Resumo Plano</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -10,4 +10,75 @@
       <ion-title size="large">planosResumo</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <br />
+
+  <div class="centrar-div">
+    <ion-text color="primary">Resumo</ion-text>
+  </div> 
+
+  <br />
+
+  <br />
+  <ion-list>
+    <ion-item>
+      <ion-textarea label="Nome do Plano" placeholder="Plano 1"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-textarea label="Tempo do exercício" placeholder="15 min"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-textarea label="Categoria escolhida" placeholder="Cárdio"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-textarea label="Sub-Categoria" placeholder="Hit"></ion-textarea>
+    </ion-item>
+    
+  </ion-list>
+
+
+  <br />
+  <div class="ion-padding" class="centrar-div">
+    <ion-text color="primary">Exercícios escolhidos</ion-text>
+  </div> 
+  
+
+  <ion-list class="ion-padding" >
+    <ion-item>
+    <ion-checkbox justify="space-between">Jumping Jacks</ion-checkbox>
+  </ion-item>
+  <ion-item>
+    <ion-checkbox justify="space-between">Cadeira</ion-checkbox>
+  </ion-item>
+  <ion-item>
+    <ion-checkbox justify="space-between">Flexão</ion-checkbox>
+  </ion-item>
+  <ion-item>
+    <ion-checkbox justify="space-between">Abdominais</ion-checkbox>
+  </ion-item>
+  </ion-list>
+
+
+  <div class="ion-padding"></div>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="guardarPlano()" shape="round">Guardar</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="cancelarplano()" shape="round">Cancelar</ion-button>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+
+
+
+
+
+
 </ion-content>

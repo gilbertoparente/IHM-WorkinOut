@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-planos',
@@ -7,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlanosPage implements OnInit {
 
-  constructor() { }
+  constructor(private route: Router) { }
 
+  criarPlanos() {
+    this.route.navigate(['/criar-planos'])
+  }
+  
   ngOnInit() {
   }
 
