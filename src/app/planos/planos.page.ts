@@ -13,8 +13,7 @@ export class PlanosPage implements OnInit {
   criarPlanos() {
     this.route.navigate(['/criar-planos'])
   }
-
-
+  
   ngOnInit() {
   }
 
