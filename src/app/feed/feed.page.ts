@@ -20,7 +20,7 @@ export class FeedPage implements OnInit {
   }
 
   carregarPublicacoes() {
-    const url = 'https://api.example.com/feed'; // Substitua pela URL da API real
+    const url = 'https://api.example.com/feed'; //substituir pela api 
 
     this.http.get<any[]>(url).subscribe(data => {
       this.publicacoes = data;
