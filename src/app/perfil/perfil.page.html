@@ -1,30 +1,44 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>perfil</ion-title>
+<ion-header [translucent]="true" class="gray">
+  <ion-toolbar class="text-gray">
+    <ion-title>Perfil</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content class="gray" [fullscreen]="true">
   <ion-header collapse="condense">
-    <ion-toolbar>
+    <ion-toolbar class="gray">
       <ion-title size="large">perfil</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <ion-list>
-    <ion-item>
+  <ion-list class="gray">
+    <ion-grid class="gray">
+      <ion-row class="gray">
+        
+        <ion-col class="gray" class="ion-padding">
+          <ion-avatar>
+            <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+          </ion-avatar>
+        </ion-col>
+        <ion-col></ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <div class="ion-padding"><h2> Informações Pessoais</h2></div>
+
+    <ion-item class="gray">
       <ion-icon slot="start" name="person"></ion-icon>
-      <ion-label>Nome: John Doe</ion-label>
+      <ion-label>Nome: {{ user?.nome }}</ion-label>
     </ion-item>
-
-    <ion-item>
+    <ion-item class="gray">
       <ion-icon slot="start" name="mail"></ion-icon>
-      <ion-label>Email: john.doe@example.com</ion-label>
+      <ion-label>Email: {{ user?.email }}</ion-label>
     </ion-item>
+      
+  <div class="ion-padding"><h2> Opções</h2></div>
 
-    <ion-item>
-      <ion-icon slot="start" name="call"></ion-icon>
-      <ion-label>Telefone: (123) 456-7890</ion-label>
-    </ion-item>
   </ion-list>
+  <ion-button (click)="alterInfo()" expand="block">Alterar Informações</ion-button>
+  <ion-button (click)="sair()" expand="block">Sair</ion-button>
+
 </ion-content>
