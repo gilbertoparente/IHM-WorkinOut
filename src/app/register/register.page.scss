@@ -10,11 +10,11 @@
 
   
 ion-range::part(tick) {
-    background: #a2d2ff;
+    background: #ffffff;
   }
   
   ion-range::part(tick-active) {
-    background: #bde0fe;
+    background: #ffffff;
   }
   
   ion-range::part(pin) {
@@ -22,7 +22,7 @@ ion-range::part(tick) {
     align-items: center;
     justify-content: center;
   
-    background: #ffafcc;
+    background: #fa6502(0, 100%, 51%);
     color: #fff;
   
     border-radius: 50%;
@@ -40,7 +40,7 @@ ion-range::part(tick) {
   }
   
   ion-range::part(knob) {
-    background: #ffc8dd;
+    background:#fa6502;
   }
   
   ion-range::part(bar) {
@@ -48,6 +48,6 @@ ion-range::part(tick) {
   }
   
   ion-range::part(bar-active) {
-    background: #bde0fe;
+    background: #fa6502;
   }
 
