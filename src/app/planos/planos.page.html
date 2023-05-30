@@ -26,61 +26,22 @@
     </ion-row>
   </ion-grid>
 
-  <ion-select label="Meus treinos" label-placement="floating" fill="outline">
-    <ion-select-option *ngFor="let plano of planos | keyvalue" [value]="plano.key">
-      {{ plano.value.title }}
-    </ion-select-option>
-  </ion-select>
-
-  <br />
-  
-  <ion-select label="Alongamentos" label-placement="floating" fill="outline">
-    <ion-select-option value="apple">Treino de alongamentos 1</ion-select-option>
-    <ion-select-option value="banana">Treino de alongamentos 2</ion-select-option>
-    <ion-select-option value="orange">Treino de alongamentos 3</ion-select-option>
-  </ion-select>
-  
-  <br />
-
-  <ion-select label="Meus planos" label-placement="floating" fill="outline">
-    <ion-select-option value="1">Treino de alongamentos 1</ion-select-option>
-    <ion-select-option value="2">Treino de alongamentos 2</ion-select-option>
-    <ion-select-option value="3">Treino de alongamentos 3</ion-select-option>
-  </ion-select>
-
-  <br />
-
-  <ion-select label="Ioga" label-placement="floating" fill="outline">
-    <ion-select-option value="1">Treino de ioga 1</ion-select-option>
-    <ion-select-option value="2">Treino de ioga 2</ion-select-option>
-    <ion-select-option value="3">Treino de ioga 3</ion-select-option>
-  </ion-select>
-
-  <br />
-
-  <ion-select label="Musculação" label-placement="floating" fill="outline">
-    <ion-select-option value="1">Treino de musculação 1</ion-select-option>
-    <ion-select-option value="2">Treino de musculação 2</ion-select-option>
-    <ion-select-option value="3">Treino de musculação 3</ion-select-option>
-  </ion-select>
-
-  <br />
-
-  <ion-select label="Cárdio" label-placement="floating" fill="outline">
-    <ion-select-option value="1">Treino de cárdio 1</ion-select-option>
-    <ion-select-option value="2">Treino de cárdio 2</ion-select-option>
-    <ion-select-option value="3">Treino de cárdio 3</ion-select-option>
-  </ion-select>
-
-  <br />
-
-  <ion-select label="Resistência" label-placement="floating" fill="outline">
-    <ion-select-option value="1">Treino de resistencia 1</ion-select-option>
-    <ion-select-option value="2">Treino de resistencia 2</ion-select-option>
-    <ion-select-option value="3">Treino de resistencia 3</ion-select-option>
-  </ion-select>
-
-  <br />
+  <ion-list>
+    <ng-container *ngFor="let category of dataCategories | keyvalue">
+      <ion-item>
+        <ion-label>{{ category.value.name }}</ion-label>
+        <ion-button fill="clear" slot="end" (click)="toggleSubcategories(category.key)">
+          <ion-icon [name]="showSubcategories[category.key] ? 'arrow-up' : 'arrow-down'"></ion-icon>
+        </ion-button>
+      </ion-item>
+      <ion-item-group *ngIf="showSubcategories[category.key]">
+        <ion-item *ngFor="let subcategory of category.value.subcategories">
+          <ion-label>{{ subcategory }}</ion-label>
+          <ion-checkbox class="checkmark" [(ngModel)]="selectedSubcategories[category.key][subcategory]"></ion-checkbox>
+        </ion-item>
+      </ion-item-group>
+    </ng-container>
+  </ion-list>
   
   <ion-button  [disabled]="true">Iniciar treino</ion-button>
 

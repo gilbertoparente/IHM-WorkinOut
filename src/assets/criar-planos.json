@@ -1,0 +1,114 @@
+{
+    "categories": [
+      {
+        "name": "Alongamentos",
+        "subcategories": [
+          {
+            "name": "Corpo inteiro",
+            "exercises": ["Exercise 1", "Exercise 2", "Exercise 3"]
+          },
+          {
+            "name": "Pernas",
+            "exercises": ["Exercise 4", "Exercise 5", "Exercise 6"]
+          },
+          {
+            "name": "Braços",
+            "exercises": ["Exercise 7", "Exercise 8", "Exercise 9"]
+          }
+        ]
+      },
+      {
+        "name": "Ioga",
+        "subcategories": [
+          {
+            "name": "Hatha",
+            "exercises": ["Exercise 10", "Exercise 11", "Exercise 12"]
+          },
+          {
+            "name": "Ashtanga",
+            "exercises": ["Exercise 13", "Exercise 14", "Exercise 15"]
+          },
+          {
+            "name": "Vinyasa",
+            "exercises": ["Exercise 16", "Exercise 17", "Exercise 18"]
+          },
+          {
+            "name": "Kundalini",
+            "exercises": ["Exercise 19", "Exercise 20", "Exercise 21"]
+          },
+          {
+            "name": "Raja",
+            "exercises": ["Exercise 22", "Exercise 23", "Exercise 24"]
+          },
+          {
+            "name": "Iyengar",
+            "exercises": ["Exercise 25", "Exercise 26", "Exercise 27"]
+          }
+        ]
+      },
+      {
+        "name": "Musculação",
+        "subcategories": [
+          {
+            "name": "Costas",
+            "exercises": ["Exercise 28", "Exercise 29", "Exercise 30"]
+          },
+          {
+            "name": "Braços/Ombros",
+            "exercises": ["Exercise 31", "Exercise 32", "Exercise 33"]
+          },
+          {
+            "name": "Pernas",
+            "exercises": ["Exercise 34", "Exercise 35", "Exercise 36"]
+          },
+          {
+            "name": "Abdominais",
+            "exercises": ["Exercise 37", "Exercise 38", "Exercise 39"]
+          },
+          {
+            "name": "Peito",
+            "exercises": ["Exercise 40", "Exercise 41", "Exercise 42"]
+          }
+        ]
+      },
+      {
+        "name": "Cardio",
+        "subcategories": [
+          {
+            "name": "Corrida",
+            "exercises": ["Exercise 43", "Exercise 44", "Exercise 45"]
+          },
+          {
+            "name": "Natação",
+            "exercises": ["Exercise 46", "Exercise 47", "Exercise 48"]
+          },
+          {
+            "name": "HIIT",
+            "exercises": ["Exercise 49", "Exercise 50", "Exercise 51"]
+          },
+          {
+            "name": "Treino funcional",
+            "exercises": ["Exercise 52", "Exercise 53", "Exercise 54"]
+          }
+        ]
+      },
+      {
+        "name": "Resistência",
+        "subcategories": [
+          {
+            "name": "Corrida",
+            "exercises": ["Exercise 55", "Exercise 56", "Exercise 57"]
+          },
+          {
+            "name": "Natação",
+            "exercises": ["Exercise 58", "Exercise 59", "Exercise 60"]
+          },
+          {
+            "name": "Ciclismo",
+            "exercises": ["Exercise 61", "Exercise 62", "Exercise 63"]
+          }
+        ]
+      }
+    ]
+  }
+  

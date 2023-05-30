@@ -12,6 +12,8 @@ import { IonicStorageModule } from '@ionic/storage-angular';
 import { Drivers } from '@ionic/storage';
 import * as CordovaSQLiteDriver from 'localforage-cordovasqlitedriver';
 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -19,6 +21,7 @@ import * as CordovaSQLiteDriver from 'localforage-cordovasqlitedriver';
     IonicModule.forRoot(),
     AppRoutingModule,
     RegisterPageModule,
+    HttpClientModule,
     IonicStorageModule.forRoot({
       driverOrder: [
         CordovaSQLiteDriver._driver,
@@ -29,7 +32,6 @@ import * as CordovaSQLiteDriver from 'localforage-cordovasqlitedriver';
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
-    // Add other providers if needed
   ],
   bootstrap: [AppComponent],
 })
