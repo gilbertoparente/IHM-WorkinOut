@@ -4,59 +4,56 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true"  class="texto-claro" >
+<ion-content [fullscreen]="true" class="texto-claro">
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large" color="success">Registo</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  
   <ion-list>
-    <ion-list>
-      <ion-item class="ion-color-white">
-        <ion-input
-          type="text"
-          [(ngModel)]="user.nome"
-          name="nome"
-          required
-          placeholder="Nome"
-        ></ion-input>
-      </ion-item>
-  
-      <ion-item>
-        <ion-input
-          type="email"
-          [(ngModel)]="user.email"
-          name="email"
-          required
-          placeholder="Email"
-        ></ion-input>
-      </ion-item>
-  
-      <ion-item>
-        <ion-input
+    <ion-item class="ion-color-white">
+      <ion-input
+        type="text"
+        [(ngModel)]="user.nome"
+        name="nome"
+        required
+        placeholder="Nome"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input
+        type="email"
+        [(ngModel)]="user.email"
+        name="email"
+        required
+        placeholder="Email"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input
         type="password"
         [(ngModel)]="user.password"
         name="password"
         required
         placeholder="Palavra-passe"
-        ></ion-input>
-      </ion-item>
-  
-      <ion-item>
-        <ion-input
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input
         type="password" 
         name="confirmPassword" 
         required
         placeholder="Confirmação palavra-passe"
-        ></ion-input>
-      </ion-item>
-  
-     </ion-list>
+      ></ion-input>
+    </ion-item>
   </ion-list>
+
   <div class="ion-padding">
-    <ion-list>          
+    <ion-list>
       <ion-item>
         <ion-select aria-label="idade" interface="popover" placeholder="Selecionar idade" [(ngModel)]="user.idade">
           <ion-select-option value="18">18</ion-select-option>
@@ -104,40 +101,42 @@
       </ion-item>
     </ion-list>
   </div>
-  <div class="ion-padding" class="centrar-div">
+
+  <div class="ion-padding centrar-div">
     <ion-text color="primary">Condição Física</ion-text>
   </div> 
 
   <div class="ion-padding">
     <ion-range
-    aria-label="Custom range"
-    [min]="0"
-    [max]="10"
-    [(ngModel)]="user.condFisica"
-    [pin]="true"
-    [ticks]="true"
-    [snaps]="true"
-  ></ion-range>
+      aria-label="Custom range"
+      [min]="0"
+      [max]="10"
+      [(ngModel)]="user.condFisica"
+      [pin]="true"
+      [ticks]="true"
+      [snaps]="true"
+    ></ion-range>
   </div>
 
-  <div class="ion-padding" class="centrar-div">
+  <div class="ion-padding centrar-div">
     <ion-text color="primary">Duração do treino</ion-text>
   </div>
+
   <div class="ion-padding">
     <ion-range
-    aria-label="Custom range"
-    [min]="15"
-    [max]="60"
-    [step] = "5"
-    [(ngModel)]="user.duracaoPref"
-    [pin]="true"
-    [ticks]="true"
-    [snaps]="true"
+      aria-label="Custom range"
+      [min]="15"
+      [max]="60"
+      [step]="5"
+      [(ngModel)]="user.duracaoPref"
+      [pin]="true"
+      [ticks]="true"
+      [snaps]="true"
     ></ion-range>
   </div>
 
   <div class="ion-padding">
-    <ion-list  class="centrar-div">
+    <ion-list centrar-div>
       <ion-item>
         <ion-select aria-label="dia" placeholder="Dias de treino" [multiple]="true" [(ngModel)]="user.diasTreino">
           <ion-select-option value="segunda">Segunda</ion-select-option>
@@ -155,8 +154,8 @@
   <div class="ion-padding"></div>
   <div class="ion-padding"></div>
 
-  <div class="ion-padding" class="centrar-div" >
-    <ion-list >
+  <div class="ion-padding centrar-div">
+    <ion-list>
       <ion-item>
         <ion-select aria-label="tipo" placeholder="Foco do Treino" [multiple]="true" [(ngModel)]="user.foco">
           <ion-select-option value="cardio">Cardio</ion-select-option>
@@ -178,11 +177,6 @@
       <ion-col>
         <ion-button (click)="cancelar()" shape="round">Cancelar</ion-button>
       </ion-col>
-
     </ion-row>
   </ion-grid>
-
-  
-
-
 </ion-content>
