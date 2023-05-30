@@ -8,31 +8,37 @@ ion-content {
 }
 
 ion-button {
-  --background: #ea7203;
+  --background: #e25c03;
   --color-selected: red;
   --border-radius: 50px;
-  margin-top: auto; /* Push the button to the bottom of the container */
-  margin-bottom: 20px; /* Add some bottom margin for spacing */
 }
 
 
 ion-select {
-  background-color: #585858;
+  background-color: #d40000;
   border-radius: 10px;
   --border-radius:10px;
 
 }
 
 ion-fab-button {
-  --background: #ea7203;
+  --background: #e25c03;
   --color-selected: red;
   border-radius: 50%;
   box-shadow: 0 0 10px 2px #ea73039f;
 
 }
 
-ion-button {
-  --background: #ea7203;
-  --color-selected: red;
-  --border-radius: 50px;
+ion-icon {
+  color: rgb(255, 255, 255); /* Replace "red" with your desired color value */
+}
+
+ion-checkbox {
+  --size: 20px;
+  --checkbox-background-checked: #a0a0a0;
+}
+
+ion-checkbox::part(container) {
+  border-radius: 20px;
+  border: 2px solid #a0a0a0;
 }

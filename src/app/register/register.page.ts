@@ -7,6 +7,7 @@ import { AuthenticationService, User } from '../services/authentication.service'
   templateUrl: './register.page.html',
   styleUrls: ['./register.page.scss'],
 })
+
 export class RegisterPage {
   user: User = {
     nome: '',
