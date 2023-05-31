@@ -18,7 +18,7 @@
   <br />
 
   <div class="ion-padding" class="centrar-div">
-    <ion-text color="primary">Criar o meu plano</ion-text>
+    <ion-text class="criar_meu_plano">Criar o meu plano</ion-text>
   </div> 
   <br />
   <br />
@@ -41,7 +41,7 @@
   <br />
 
   <div class="ion-padding" class="centrar-div">
-    <ion-text color="primary">Tempo exercício</ion-text>
+    <ion-text>Tempo exercício</ion-text>
   </div>
   
   <div class="ion-padding">
@@ -52,7 +52,7 @@
   </div>
   
   <div class="ion-padding">
-    <ion-text color="primary">Duração do exercício: {{workoutDuration}} minutos</ion-text>
+    <ion-text class="duracao_do_exercicio">Duração do exercício: {{workoutDuration}} minutos</ion-text>
   </div>
 
   <div class="ion-padding" *ngIf="availableExercises.length > 0">
@@ -71,7 +71,7 @@
     <ion-row>
       <ion-col></ion-col>
       <ion-col>
-        <ion-button (click)="resumoPlanos()" [disabled]="false">Avançar</ion-button>
+        <ion-button (click)="resumoPlanos()" [disabled]="false" class="avançar">Avançar</ion-button>
       </ion-col>
       <ion-col></ion-col>
     </ion-row>
