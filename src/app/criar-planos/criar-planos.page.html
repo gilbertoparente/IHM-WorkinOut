@@ -14,7 +14,6 @@
     </ion-toolbar>
   </ion-header>
 
-
   <br />
   <br />
 
@@ -24,18 +23,18 @@
   <br />
   <br />
 
-  <ion-select label="Categoria" label-placement="floating" fill="outline">
-    <ion-select-option value="apple">Treino de cárdio 1</ion-select-option>
-    <ion-select-option value="banana">Treino de cárdio 2</ion-select-option>
-    <ion-select-option value="orange">Treino de cárdio 3</ion-select-option>
+  <ion-select label="Categoria" label-placement="floating" fill="outline" [(ngModel)]="selectedCategory">
+    <ion-select-option *ngFor="let category of dataCategories" [value]="category.name">
+      {{ category.name }}
+    </ion-select-option>
   </ion-select>
 
   <br />
 
-  <ion-select label="Sub-Categoria" label-placement="floating" fill="outline">
-    <ion-select-option value="apple">Treino de resistencia 1</ion-select-option>
-    <ion-select-option value="banana">Treino de resistencia 2</ion-select-option>
-    <ion-select-option value="orange">Treino de resistencia 3</ion-select-option>
+  <ion-select label="Sub-Categoria" label-placement="floating" fill="outline" [(ngModel)]="selectedSubcategory" (ionChange)="onSubcategoryChange()">
+    <ion-select-option *ngFor="let subcategory of getSubcategories(selectedCategory)" [value]="subcategory.name">
+      {{ subcategory.name }}
+    </ion-select-option>
   </ion-select>
 
   <br />
@@ -43,53 +42,38 @@
 
   <div class="ion-padding" class="centrar-div">
     <ion-text color="primary">Tempo exercício</ion-text>
-  </div> 
- 
-
+  </div>
+  
   <div class="ion-padding">
-    <ion-range
-    aria-label="Custom range"
-    [min]="15"
-    [max]="60"
-    [value]="5"
-    [pin]="true"
-    [ticks]="true"
-    [snaps]="true"
-  ></ion-range>
+    <ion-range min="15" max="90" step="5" snaps="true" [(ngModel)]="workoutDuration">
+      <ion-label slot="start">15</ion-label>
+      <ion-label slot="end">90</ion-label>
+    </ion-range>
+  </div>
+  
+  <div class="ion-padding">
+    <ion-text color="primary">Duração do exercício: {{workoutDuration}} minutos</ion-text>
   </div>
 
-
-  <br />
-
-  <div class="ion-padding" class="centrar-div">
+  <div class="ion-padding" *ngIf="availableExercises.length > 0">
     <ion-text color="primary">Exercícios disponíveis</ion-text>
-  </div> 
+  </div>
+
+  <ion-list *ngIf="availableExercises.length > 0">
+    <ion-item *ngFor="let exercise of availableExercises">
+      <ion-label>{{ exercise.name }}</ion-label>
+      <ion-checkbox slot="end" [(ngModel)]="exercise.isSelected"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+
   <br />
-
-  <ion-list class="ion-padding" >
-    <ion-item>
-    <ion-checkbox justify="space-between">Jumping Jackss</ion-checkbox>
-  </ion-item>
-  <ion-item>
-    <ion-checkbox justify="space-between">Cadeira</ion-checkbox>
-  </ion-item>
-  <ion-item>
-    <ion-checkbox justify="space-between">Flexão</ion-checkbox>
-  </ion-item>
-  <ion-item>
-    <ion-checkbox justify="space-between">Abdominais</ion-checkbox>
-  </ion-item>
-</ion-list>
-
-<br />
-<ion-grid>
-  <ion-row>
-    <ion-col></ion-col>
-    <ion-col>
-      <ion-button  (click)="resumoPlanos()" [disabled]="false">Avançar</ion-button>
-    </ion-col>
-    <ion-col></ion-col>
-  </ion-row>
-</ion-grid>
-
+  <ion-grid>
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col>
+        <ion-button (click)="resumoPlanos()" [disabled]="false">Avançar</ion-button>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

@@ -1,122 +1,52 @@
 {
-    "categorias": [
-      {
-        "nome": "Alongamentos",
-        "planos": [
-          {
-            "id": "1",
-            "title": "Plano de alongamento 1",
-            "tempo": "10",
-            "exercicios": [
-              {
-                "id": "1",
-                "title": " Exercício Alongamento 1",
-                "duracao": "5 minutos"
-              },
-              {
-                "id": "2",
-                "title": "Exercício Alongamento 2",
-                "duracao": "10 minutos"
-              }
-            ]
-          },
-          {
-            "id": "2",
-            "title": "Ioga",
-            "tempo": "15",
-            "exercicios": [
-              {
-                "id": "3",
-                "title": "Exercício  Ioga 1",
-                "duracao": "8 minutos"
-              },
-              {
-                "id": "4",
-                "title": "Exercício Ioga 2",
-                "duracao": "12 minutos"
-              }
-            ]
-          }
+    "alongamentos": {
+        "name": "Alongamentos",
+        "subcategories": [
+            "Corpo inteiro",
+            "Pernas",
+            "Braços"
         ]
-      },
-      {
-        "nome": "Musculação 2",
-        "planos": [
-          {
-            "id": "3",
-            "title": "Plano de Musculação",
-            "tempo": "20",
-            "exercicios": [
-              {
-                "id": "5",
-                "title": "Exercício  Musculação 1",
-                "duracao": "15 minutos"
-              },
-              {
-                "id": "6",
-                "title": "Exercício Musculação2",
-                "duracao": "20 minutos"
-              }
-            ]
-          },
-          {
-            "id": "4",
-            "title": "Plano de Musculação 2",
-            "tempo": "25",
-            "exercicios": [
-              {
-                "id": "7",
-                "title": "Exercício Musculação 1",
-                "duracao": "18 minutos"
-              },
-              {
-                "id": "8",
-                "title": "Exercício Musculação2",
-                "duracao": "22 minutos"
-              }
-            ]
-          }
+    },
+
+    "ioga": {
+        "name": "Ioga",
+        "subcategories": [
+            "Hatha",
+            "Ashtanga",
+            "Vinyasa",
+            "Kundalini",
+            "Raja",
+            "Iyengar"
         ]
-      },
-      {
-        "nome": "Cardio",
-        "planos": [
-          {
-            "id": "3",
-            "title": "Plano de Cardio",
-            "tempo": "20",
-            "exercicios": [
-              {
-                "id": "5",
-                "title": "Exercício  Cardio 1",
-                "duracao": "15 minutos"
-              },
-              {
-                "id": "6",
-                "title": "Exercício Cardio",
-                "duracao": "20 minutos"
-              }
-            ]
-          },
-          {
-            "id": "4",
-            "title": "Plano de Cardio 2",
-            "tempo": "25",
-            "exercicios": [
-              {
-                "id": "7",
-                "title": "Exercício Cardio 1",
-                "duracao": "18 minutos"
-              },
-              {
-                "id": "8",
-                "title": "Exercício Cardio",
-                "duracao": "22 minutos"
-              }
-            ]
-          }
+    },
+
+    "musculacao": {
+        "name": "Musculação",
+        "subcategories": [
+            "Costas",
+            "Braços/Ombros",
+            "Pernas",
+            "Abdominais",
+            "Peito"
         ]
-      }
-    ]
-  }
-  
+    },
+
+    "cardio": {
+        "name": "Cardio",
+        "subcategories": [
+            "Corrida",
+            "Natação",
+            "HIIT",
+            "Treino funcional"
+        ]
+    },
+
+    "resistencia": {
+        "name": "Resistência",
+        "subcategories": [
+            "Corrida",
+            "Natação",
+            "Ciclismo"
+        ]
+    }
+}
