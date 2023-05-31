@@ -14,6 +14,14 @@
     --color: #FF9900;
 }
 
+.condicao_fisica{
+    color: #FF9900;
+}
+
+.duracao_de_treino{
+    color: #FF9900;
+}
+
 .botao_submeter{
     --background: #FF9900;
     --color: #fff;
@@ -24,6 +32,9 @@
     --color: #fff;  
 
   }
+
+
+
 
 ion-range::part(tick) {
     background: #ffffff;
@@ -38,7 +49,7 @@ ion-range::part(tick) {
     align-items: center;
     justify-content: center;
   
-    background: #fa6502(0, 100%, 51%);
+    background: #fa6502;
     color: #fff;
   
     border-radius: 50%;
