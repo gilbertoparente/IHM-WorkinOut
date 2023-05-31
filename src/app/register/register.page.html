@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>    
-    <ion-title>Criar Conta</ion-title>
+    <ion-title class="criar_conta">Criar Conta</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -169,13 +169,14 @@
   </div>
 
   <div class="ion-padding"></div>
+ 
   <ion-grid>
     <ion-row>
       <ion-col>
-        <ion-button (click)="submeter()" shape="round">Submeter</ion-button>
+        <ion-button (click)="submeter()" shape="round" class="botao_submeter">Submeter</ion-button>
       </ion-col>
       <ion-col>
-        <ion-button (click)="cancelar()" shape="round">Cancelar</ion-button>
+        <ion-button (click)="cancelar()" shape="round" class="botao_cancelar">Cancelar</ion-button>
       </ion-col>
     </ion-row>
   </ion-grid>

@@ -8,7 +8,21 @@
     transform: translate(-50%, -50%);
   }
 
-  
+.criar_conta{
+    --color: #FF9900;
+}
+
+.botao_submeter{
+    --background: #FF9900;
+    --color: #fff;
+  }
+
+.botao_cancelar{
+    --background: #3C3C3C;
+    --color: #fff;  
+
+  }
+
 ion-range::part(tick) {
     background: #ffffff;
   }
