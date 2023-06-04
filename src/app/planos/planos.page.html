@@ -42,7 +42,9 @@
       </ion-item-group>
     </ng-container>
   </ion-list>
+  <div class="ion-padding">
+    <ion-button  [disabled]="false">Iniciar treino</ion-button>
+    <ion-button  (click)="editarPlanos()">editar plano</ion-button>
+  </div>
   
-  <ion-button  [disabled]="true">Iniciar treino</ion-button>
-  <ion-button  (click)="editarPlanos()">editar plano</ion-button>
 </ion-content>
