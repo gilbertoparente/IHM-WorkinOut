@@ -26,7 +26,11 @@ export const routes: Routes = [
     path: '',
     redirectTo: 'login',
     pathMatch: 'full'
+  },  {
+    path: 'editar-planos',
+    loadChildren: () => import('./editar-planos/editar-planos.module').then( m => m.EditarPlanosPageModule)
   }
+
   
 ];
 @NgModule({

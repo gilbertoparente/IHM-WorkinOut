@@ -10,18 +10,23 @@
       <ion-title size="large">treinar</ion-title>
     </ion-toolbar>
   </ion-header>
+<!-- <ion-list>
+  <ion-item *ngFor="let category of planos">
+    <ion-label>
+      <h2>{{ category.name }}</h2>
+      <ion-list>
+        <ion-item *ngFor="let subcategory of category.subCategoria">
+          <ion-label>
+            <h3>{{ subcategory.name }}</h3>
+            <p>Exercícios: {{ subcategory.exercises.join(', ') }}</p>
+            <iframe width="560" height="315" [src]="getVideoUrl(subcategory)" frameborder="0" allowfullscreen></iframe>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-label>
+  </ion-item>
+</ion-list> -->
 
-  <ion-list>
-    <ion-item *ngFor="let plano of planos">
-      <ion-label>
-        <h2>{{ plano.nome }}</h2>
-        <p>Duração: {{ plano.duracao }}</p>
-        <p>Exercícios: {{ plano.exercicios.join(', ') }}</p>
-        <p>Categoria: {{ plano.categoria }}</p>
-        <iframe width="560" height="315" [src]="getVideoUrl(plano.categoria)" frameborder="0" allowfullscreen></iframe>
-
-      </ion-label>
-    </ion-item>
-  </ion-list>
+  
   
 </ion-content>

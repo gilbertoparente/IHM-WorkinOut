@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Editar Planos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div></div>
+  <ion-list>
+    <ion-item>
+      <ion-label>Categoria</ion-label>
+      <ion-select [(ngModel)]="selectedCategory" (ionChange)="onCategoryChange()">
+        <ion-select-option *ngFor="let category of dataCategories" [value]="category">{{ category.name }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item *ngIf="selectedCategory">
+      <ion-label>Sub Categoria</ion-label>
+      <ion-select [(ngModel)]="selectedSubcategory" (ionChange)="onSubcategoryChange()">
+        <ion-select-option *ngFor="let subcategory of selectedCategory.subcategories" [value]="subcategory">{{ subcategory.name }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item *ngIf="selectedSubcategory">
+      <ion-label>Exercicios</ion-label>
+      <ion-checkbox *ngFor="let exercise of availableExercises" [(ngModel)]="exercise.isSelected">{{ exercise.name }}</ion-checkbox>
+    </ion-item>
+  </ion-list>
+
+  <div class="ion-padding">
+    <ion-range min="15" max="90" step="5" snaps="true" [(ngModel)]="workoutDuration">
+      <ion-label slot="start">15</ion-label>
+      <ion-label slot="end">90</ion-label>
+    </ion-range>
+  </div>
+
+  <ion-button expand="full" (click)="saveChanges()">Save Changes</ion-button>
+</ion-content>

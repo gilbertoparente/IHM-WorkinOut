@@ -52,6 +52,10 @@ export class PlanosPage implements OnInit {
     this.route.navigate(['/criar-planos'])
   }
 
+  editarPlanos() {
+    this.route.navigate(['/editar-planos'])
+  }
+
   toggleSubcategories(category: string) {
     this.showSubcategories[category] = !this.showSubcategories[category];
     if (this.showSubcategories[category]) {

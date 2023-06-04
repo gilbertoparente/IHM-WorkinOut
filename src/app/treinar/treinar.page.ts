@@ -23,7 +23,7 @@ export class TreinarPage implements OnInit {
   constructor(private sanitizer: DomSanitizer) { }
 
   ngOnInit() {
-    fetch('./assets/planos.json')
+    fetch('./assets/criar-planos.json')
       .then(res => res.json())
       .then(data => {
         this.planos = data.planos;
@@ -33,17 +33,21 @@ export class TreinarPage implements OnInit {
       });
   }
 
-  getVideoUrl(categoria: string): SafeResourceUrl {
-    if (categoria === 'Alongamentos') {
+  getVideoUrl(subcategory: any): SafeResourceUrl {
+    if (subcategory.categoria === 'Alongamentos') {
       return this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/4-4f10fL1pw');
-    } else if (categoria === 'Category 1') {
+    } else if (subcategory.categoria === 'Ioga') {
       return this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/q2NZyW5EP5A');
-    } else if (categoria === 'Category 2') {
+    } else if (subcategory.categoria === 'Musculação') {
       return this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/q2NZyW5EP5A');
-    }    
-    else {
+    } else if (subcategory.categoria === 'Cardio') {
+      return this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/q2NZyW5EP5A');
+    } else if (subcategory.categoria === 'Resistência') {
+      return this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/q2NZyW5EP5A');
+    } else {
       return '';
     }
   }
+  
   
 }
