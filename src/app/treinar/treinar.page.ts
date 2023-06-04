@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
-
+interface SubCategoria {
+  nome: string;
+  duracao: string;
+  exercicios: string[];
+}
 
 interface Planos {
   menu: string;
   categoria: string;
-  subCategoria: string;
-  nome: string;
-  duracao: string;
-  exercicios: string[];
+  subCategoria: SubCategoria[];
 }
 
 @Component({
@@ -23,7 +24,7 @@ export class TreinarPage implements OnInit {
   constructor(private sanitizer: DomSanitizer) { }
 
   ngOnInit() {
-    fetch('./assets/criar-planos.json')
+    fetch('./assets/planos.json')
       .then(res => res.json())
       .then(data => {
         this.planos = data.planos;
@@ -33,21 +34,22 @@ export class TreinarPage implements OnInit {
       });
   }
 
-  getVideoUrl(subcategory: any): SafeResourceUrl {
-    if (subcategory.categoria === 'Alongamentos') {
+  getVideoUrl(subcategoria: SubCategoria): SafeResourceUrl {
+    if (subcategoria.nome === 'Alongamentos') {
       return this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/4-4f10fL1pw');
-    } else if (subcategory.categoria === 'Ioga') {
+    } else if (subcategoria.nome === 'Ioga') {
       return this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/q2NZyW5EP5A');
-    } else if (subcategory.categoria === 'Musculação') {
+    } else if (subcategoria.nome === 'Musculação') {
       return this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/q2NZyW5EP5A');
-    } else if (subcategory.categoria === 'Cardio') {
+    } else if (subcategoria.nome === 'Cardio') {
       return this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/q2NZyW5EP5A');
-    } else if (subcategory.categoria === 'Resistência') {
+    } else if (subcategoria.nome === 'Resistência') {
       return this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/q2NZyW5EP5A');
     } else {
       return '';
     }
   }
-  
+
+ 
   
 }

@@ -14,3 +14,5 @@ export class WorkoutPlanService {
   
   constructor() { }
 }
+
+export { Subcategory, Category };

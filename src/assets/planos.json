@@ -1,0 +1,139 @@
+{
+  "planos": [
+    {
+      "menu": "Alongamentos",
+      "categoria": "Alongamentos",
+      "subCategoria": [
+        {
+          "nome": "Corpo inteiro",
+          "duracao": "1 hora",
+          "exercicios": ["Exercise 1", "Exercise 2", "Exercise 3"]
+        },
+        {
+          "nome": "Pernas",
+          "duracao": "30 minutos",
+          "exercicios": ["Exercise 4", "Exercise 5", "Exercise 6"]
+        },
+        {
+          "nome": "Braços",
+          "duracao": "45 minutos",
+          "exercicios": ["Exercise 7", "Exercise 8", "Exercise 9"]
+        }
+      ]
+    },
+    {
+      "menu": "Ioga",
+      "categoria": "Ioga",
+      "subCategoria": [
+        {
+          "nome": "Hatha",
+          "duracao": "1 hora",
+          "exercicios": ["Exercise 10", "Exercise 11", "Exercise 12"]
+        },
+        {
+          "nome": "Ashtanga",
+          "duracao": "1 hora",
+          "exercicios": ["Exercise 13", "Exercise 14", "Exercise 15"]
+        },
+        {
+          "nome": "Vinyasa",
+          "duracao": "45 minutos",
+          "exercicios": ["Exercise 16", "Exercise 17", "Exercise 18"]
+        },
+        {
+          "nome": "Kundalini",
+          "duracao": "1 hora",
+          "exercicios": ["Exercise 19", "Exercise 20", "Exercise 21"]
+        },
+        {
+          "nome": "Raja",
+          "duracao": "1 hora",
+          "exercicios": ["Exercise 22", "Exercise 23", "Exercise 24"]
+        },
+        {
+          "nome": "Iyengar",
+          "duracao": "45 minutos",
+          "exercicios": ["Exercise 25", "Exercise 26", "Exercise 27"]
+        }
+      ]
+    },
+    {
+      "menu": "Musculação",
+      "categoria": "Musculação",
+      "subCategoria": [
+        {
+          "nome": "Costas",
+          "duracao": "1 hora",
+          "exercicios": ["Exercise 28", "Exercise 29", "Exercise 30"]
+        },
+        {
+          "nome": "Braços/Ombros",
+          "duracao": "45 minutos",
+          "exercicios": ["Exercise 31", "Exercise 32", "Exercise 33"]
+        },
+        {
+          "nome": "Pernas",
+          "duracao": "1 hora",
+          "exercicios": ["Exercise 34", "Exercise 35", "Exercise 36"]
+        },
+        {
+          "nome": "Abdominais",
+          "duracao": "30 minutos",
+          "exercicios": ["Exercise 37", "Exercise 38", "Exercise 39"]
+        },
+        {
+          "nome": "Peito",
+          "duracao": "45 minutos",
+          "exercicios": ["Exercise 40", "Exercise 41", "Exercise 42"]
+        }
+      ]
+    },
+    {
+      "menu": "Cardio",
+      "categoria": "Cardio",
+      "subCategoria": [
+        {
+          "nome": "Corrida",
+          "duracao": "30 minutos",
+          "exercicios": ["Exercise 43", "Exercise 44", "Exercise 45"]
+        },
+        {
+          "nome": "Natação",
+          "duracao": "1 hora",
+          "exercicios": ["Exercise 46", "Exercise 47", "Exercise 48"]
+        },
+        {
+          "nome": "HIIT",
+          "duracao": "30 minutos",
+          "exercicios": ["Exercise 49", "Exercise 50", "Exercise 51"]
+        },
+        {
+          "nome": "Treino funcional",
+          "duracao": "45 minutos",
+          "exercicios": ["Exercise 52", "Exercise 53", "Exercise 54"]
+        }
+      ]
+    },
+    {
+      "menu": "Resistência",
+      "categoria": "Resistência",
+      "subCategoria": [
+        {
+          "nome": "Corrida",
+          "duracao": "1 hora",
+          "exercicios": ["Exercise 55", "Exercise 56", "Exercise 57"]
+        },
+        {
+          "nome": "Natação",
+          "duracao": "1 hora",
+          "exercicios": ["Exercise 58", "Exercise 59", "Exercise 60"]
+        },
+        {
+          "nome": "Ciclismo",
+          "duracao": "1 hora",
+          "exercicios": ["Exercise 61", "Exercise 62", "Exercise 63"]
+        }
+      ]
+    }
+  ]
+}

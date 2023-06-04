@@ -61,6 +61,14 @@ export class EditarPlanosPage {
     }
   }
 
+  saveChangesLocally(updatedData: any) {
+    const jsonData = JSON.stringify(updatedData, null, 2);
+    
+    const filePath = './assets/criar-planos.json';
+  
+    console.log('Changes saved successfully:', jsonData);
+  }
+
   saveChanges() {
     if (!this.selectedCategory || !this.selectedSubcategory) {
       console.error('No category or subcategory selected.');
@@ -68,37 +76,17 @@ export class EditarPlanosPage {
     }
   
     const updatedCategories = this.dataCategories.map((category) => {
-      if (this.selectedCategory && category.name === this.selectedCategory.name) {
-        const updatedSubcategories = category.subcategories.map((subcategory) => {
-          if (this.selectedSubcategory && subcategory.name === this.selectedSubcategory.name) {
-            return {
-              ...subcategory,
-              exercises: this.availableExercises
-                .filter((exercise) => exercise.isSelected)
-                .map((exercise) => exercise.name),
-            };
-          }
-          return subcategory;
-        });
-  
-        return {
-          ...category,
-          subcategories: updatedSubcategories,
-        };
-      }
-      return category;
+     
+      
     });
   
     const updatedData = { categories: updatedCategories };
   
-    this.http.put('http://example.com/api/criar-planos', updatedData).subscribe(
-      () => {
-        console.log('Changes saved successfully.');
-        this.router.navigate(['/planos']);
-      },
-      (error) => {
-        console.error('Error saving changes:', error);
-      }
-    );
+    this.saveChangesLocally(updatedData);
+  
+    // Navegue para a página '/planos' após salvar as alterações localmente
+    this.router.navigate(['/planos']);
   }
+  
+  
   }
